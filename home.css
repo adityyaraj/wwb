@@ -1,0 +1,64 @@
+/* Sample CSS for the layout with alternating content alignment */
+.content {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.content-section {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 20px 0;
+}
+
+.content-box {
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    padding: 20px;
+    display: flex; 
+}
+
+.content-image,
+.content-text {
+    width: 50%;
+    padding: 10px; 
+    box-sizing: border-box; 
+}
+
+.content-text {
+    text-align: justify;
+}
+
+
+.content-section:nth-child(odd) .content-text {
+    text-align: right;
+}
+
+.content-section:nth-child(odd) .content-image {
+    order: 2; 
+}
+
+.content-section:nth-child(even) .content-text {
+    text-align: left;
+}
+
+.content-section:nth-child(even) .content-image {
+    order: 1; }
+
+.content-image img {
+    max-width: 100%;
+    height: auto;
+}
+
+@media (max-width: 768px) {
+    .content-section {
+        flex-direction: column;
+    }
+
+    .content-box,
+    .content-image,
+    .content-text {
+        width: 100%;
+    }
+}

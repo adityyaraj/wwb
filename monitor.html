@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Water Monitoring and Reporting</title>
+    <link rel="stylesheet" href="mon.css">
+</head>
+<body>
+    <script src="head.js"></script>
+
+    <main>
+        <h1 style="text-shadow: none;">Water Monitoring Dashboard</h1>
+        <table>
+            <tr>
+                <th>Locations</th>
+                <th>Water Flow (Gallons/Minute)</th>
+                <th>Water Pressure (PSI)</th>
+            </tr>
+            <tr>
+                <td>Punjab</td>
+                <td id="locationAFlow">15.6</td>
+                <td id="locationAPressure">60.2</td>
+            </tr>
+            <tr>
+                <td>Haryana</td>
+                <td id="locationBFlow">12.3</td>
+                <td id="locationBPressure">55.7</td>
+            </tr>
+            <tr>
+                <td>Uttar Pradesh</td>
+                <td id="locationCFlow">18.7</td>
+                <td id="locationCPressure">70.5</td>
+            </tr>
+            <tr>
+                <td>Odisa</td>
+                <td id="locationDFlow">14.2</td>
+                <td id="locationDPressure">58.9</td>
+            </tr>
+            <tr>
+                <td>Kerla</td>
+                <td id="locationEFlow">13.9</td>
+                <td id="locationEPressure">59.4</td>
+            </tr>
+            <tr>
+                <td>Tamil Nadu</td>
+                <td id="locationFFlow">16.5</td>
+                <td id="locationFPressure">67.3</td>
+            </tr>
+            <tr>
+                <td>Bihar</td>
+                <td id="locationGFlow">19.8</td>
+                <td id="locationGPressure">72.1</td>
+            </tr>
+            <tr>
+                <td>Karnataka</td>
+                <td id="locationHFlow">20.1</td>
+                <td id="locationHPressure">75.6</td>
+            </tr>
+            <tr>
+                <td>Himachal Pradesh</td>
+                <td id="locationIFlow">11.4</td>
+                <td id="locationIPressure">53.2</td>
+            </tr>
+        </table>
+    
+        <button id="changeDataButton">Update Data</button>
+    
+        <script>
+            function generateRandomData(min, max) {
+                return (Math.random() * (max - min) + min).toFixed(2);
+            }
+    
+            function updateData() {
+                document.getElementById("locationAFlow").textContent = generateRandomData(10, 20);
+                document.getElementById("locationAPressure").textContent = generateRandomData(50, 70);
+    
+                document.getElementById("locationBFlow").textContent = generateRandomData(10, 20);
+                document.getElementById("locationBPressure").textContent = generateRandomData(50, 70);
+    
+                document.getElementById("locationCFlow").textContent = generateRandomData(10, 20);
+                document.getElementById("locationCPressure").textContent = generateRandomData(50, 70);
+    
+                document.getElementById("locationDFlow").textContent = generateRandomData(10, 20);
+                document.getElementById("locationDPressure").textContent = generateRandomData(50, 70);
+    
+                document.getElementById("locationEFlow").textContent = generateRandomData(10, 20);
+                document.getElementById("locationEPressure").textContent = generateRandomData(50, 70);
+
+                document.getElementById("locationFFlow").textContent = generateRandomData(10, 20);
+                document.getElementById("locationFPressure").textContent = generateRandomData(50, 70);
+
+                document.getElementById("locationGFlow").textContent = generateRandomData(10, 20);
+                document.getElementById("locationGPressure").textContent = generateRandomData(50, 70);
+    
+
+                document.getElementById("locationHFlow").textContent = generateRandomData(10, 20);
+                document.getElementById("locationHPressure").textContent = generateRandomData(50, 70);
+    
+                document.getElementById("locationIFlow").textContent = generateRandomData(10, 20);
+                document.getElementById("locationIPressure").textContent = generateRandomData(50, 70);
+            }
+    
+            document.getElementById("changeDataButton").addEventListener("click", updateData);
+        </script>
+    </main>
+
+
+</body>
+</html>
